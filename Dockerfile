@@ -1,4 +1,9 @@
-FROM python:3.6-alpine
+FROM python:2.7-alpine
 LABEL maintainer "UshioShugo<ushio.s@gmail.com>"
 
-CMD [ "pip", "install", "python-lambda-local==0.1.3" ]
+ENV SOURCE_DIR "/opt/lambda"
+
+RUN [ "pip", "install", "python-lambda-local==0.1.3" ]
+
+ADD . $SOURCE_DIR
+WORKDIR $SOURCE_DIR
