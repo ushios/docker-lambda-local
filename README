@@ -1,0 +1,11 @@
+# docker-lambda-local
+
+using lambda-local
+
+
+## Get started
+
+```bash
+$ docker build -t lambda-local .
+$ docker run lambda-local
+```
